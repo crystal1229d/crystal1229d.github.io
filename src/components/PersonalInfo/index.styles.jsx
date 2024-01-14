@@ -6,14 +6,14 @@ export const ProfileWrapper = styled.div`
 `;
 
 export const ProfileImageWrapper = styled.div`
-    width: 90px;
-    height: 90px;
-    
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 
     & > img {
         width: 100%;
         height: 100%;
+        border-radius: 50%;
     }
 `;
 

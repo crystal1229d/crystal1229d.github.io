@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const StyledTitle = styled.h2`
     height: 3.5rem;
     font-size: 3.0rem;
-    font-weight: 800;
-    letter-spacing: 0.4rem;
-
+    font-weight: 900;
+    letter-spacing: 0.2rem;
 `;
 
 // &:before {

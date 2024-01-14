@@ -6,8 +6,8 @@ export const PersonalInfo = () => {
     const {
         personalInfo: {
             name,
+            profileImg, 
             modifiers, 
-            profileImg,
             email,
             githubUrl, 
             blogUrl, 
@@ -18,9 +18,11 @@ export const PersonalInfo = () => {
     return (
         <CentralizedWrapper>
             <ProfileWrapper>
-                <ProfileImageWrapper>
-                    <img src={profileImg} alt='profile' />
-                </ProfileImageWrapper>
+                {profileImg  && (
+                    <ProfileImageWrapper>
+                        <img src={profileImg} alt='profile' />
+                    </ProfileImageWrapper>
+                )}
                 <GreetingsWrapper>
                     <h1>안녕하세요,</h1>
                     <h1>{name}입니다</h1>
