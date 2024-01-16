@@ -2,17 +2,17 @@ import { createGlobalStyle, styled } from 'styled-components';
 
 
 const GlobalStyle = createGlobalStyle`
-
+    * {
+        overflow-wrap: break-word;
+        word-break: keep-all;
+    }
 `;
 export default GlobalStyle;
 
 export const CentralizedWrapper = styled.article`
     width: 60vw;
     margin: 50px auto 250px auto;
-
     overflow: hidden;
-    overflow-wrap: break-word;
-    word-break: keep-all;
 
     @media (max-width: 1200px) {
         width: 80vw;
@@ -37,6 +37,7 @@ export const HorizontalList = styled.ul`
 
 export const HorizontalTechStackList = styled(HorizontalList)`
     li {
+        height: fit-content; 
         display: flex;
         padding: 3px 8px;
         background-color: ${({ theme }) => theme.colors.codeBg};
@@ -80,7 +81,6 @@ export const VerticalListWithDots = styled(VerticalList)`
 `;
 
 export const TechStackBadge = styled.span`
-    width: fit-content;
     height: fit-content; 
     display: flex;
     padding: 3px 8px;
@@ -89,11 +89,13 @@ export const TechStackBadge = styled.span`
 `;
 
 export const MainTitle = styled.h1`
+    width: fit-content;
     min-height: 3.5rem;
     height: fit-content;
     font-size: ${({ theme }) => theme.fontSizes.mainTitle};
     font-weight: 900;
     letter-spacing: 0.2rem;
+    margin-bottom: 2.0rem;
 `;
 
 export const SubTitle = styled.h2`

@@ -1,52 +1,49 @@
 import styled from 'styled-components';
 
-export const VerticalList = styled.ul`
-    display: flex;
-    flex-direction: column;
-    margin: 0.8rem 0;
-    gap: 0.5rem;
-
-    & li {
-        display: flex;
-        align-items: center;
-    }
-    & li:before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        display: inline-block;
-        margin-right: 0.5rem;
-        
-        background-color: #3a7bd5;
-        border-radius: 50%;
-    }
-`;
-
-export const HorizontalList = styled.ul`
-    display: flex;
-    gap: 8px;
-`;
-
 export const ProjectItem = styled.li`
     width: 100%;
-    display: grid;
-    grid-template-columns: 30% 68%;
-    grid-template-rows: 100%;
-    grid-column-gap: 2%;
+    padding-left: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     margin-top: 1.0rem;
     font-size: 0.9rem;
+    border-left: 1px solid #3a7bd5;
 
-    @media (max-width: 1000px) {
-        display: grid;
-        grid-template-columns: 30% 68%;
-        grid-template-rows: 100%;
-        grid-column-gap: 2%;
+    & > div {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-shrink: 0;
+    }
+
+    & > img {
+        position: relative;
+        top: 0;
+        right: 59%;
+        width: 360px;
+        height:360px;
+        z-index: -5;
+        opacity: 0.7;
+        border-radius: 12%;
+    }
+
+    & > img:hover, 
+    & > img:active {
+        opacity: 1.0;
     }
 
     @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
-        gap: 2.0rem;
+
+        & > img {
+            position: relative;
+            top: 0;
+            right: 0;
+            opacity: 1.0;
+        }
     }
 `;
 
@@ -61,33 +58,20 @@ export const ProfileImageWrapper = styled.div`
         width: 100%;
         max-width: 300px;
         height: fit-content;
-        border-radius: 50%;
     }
 `;
 
 export const LinkWrapper = styled.div`
-        font-size: 1.2rem;
-        font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 700;
 
-        a {
-            color: inherit;
-        }
-`;
-
-export const StyledT1 = styled.h1`
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-bottom: 0.3rem;
+    a {
+        color: inherit;
+    }
 `;
 
 export const StyledT3 = styled.h3`
     font-size: 1.2rem;
     font-weight: 700;
     margin: 1.2rem 0 0.5rem 0;
-`;
-
-export const SmallP = styled.p`
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin: 0.2rem 0;
 `;

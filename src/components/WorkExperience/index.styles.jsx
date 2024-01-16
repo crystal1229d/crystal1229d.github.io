@@ -27,7 +27,7 @@ export const WorkWrapper = styled.div`
 
 export const ProjectItem = styled.div`
     margin-bottom: 2.0rem;
-    padding-left: 0.5rem;
+    padding-left: 0.7rem;
     font-size: 0.8rem;
     font-weight: 400;
     border-left: 1px solid #3a7bd5;

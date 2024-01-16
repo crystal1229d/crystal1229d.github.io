@@ -1,10 +1,11 @@
 import userData from '../../data/db.json'
-import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, TechStackBadge, VerticalListWithDots } from '../../styles/GlobalStyle';
-import { LeftPane, ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
+import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, VerticalListWithDots } from '../../styles/GlobalStyle';
+import { ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
 
 export const WorkExperience = () => {
     const { workExperience } = userData;
 
+    if (!workExperience || workExperience.length === 0) return;
     return (
         <CentralizedWrapper>
             <MainTitle>Work Experience</MainTitle>
@@ -36,7 +37,7 @@ export const WorkExperience = () => {
                                     <HorizontalTechStackList>
                                         {project.techStacks.length > 0 && 
                                             project.techStacks.map((stack, s_idx) => (
-                                                <li><TechStackBadge key={s_idx}>{stack}</TechStackBadge></li>
+                                                <li key={s_idx}>{stack}</li>
                                         ))}
                                     </HorizontalTechStackList>
                                 </ProjectItem>
