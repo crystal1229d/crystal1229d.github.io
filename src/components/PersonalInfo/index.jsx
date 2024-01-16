@@ -1,6 +1,6 @@
+import { CentralizedWrapper, VerticalListWithDots } from '../../styles/GlobalStyle';
 import userData from '../../data/db.json'
-import { CentralizedWrapper } from '../common/CentralizedWrapper';
-import { ContactsWrapper, GreetingsWrapper, ProfileImageWrapper, ProfileWrapper, Wrapper } from './index.styles';
+import { ContactsWrapper, GreetingsWrapper, ProfileImageWrapper } from './index.styles';
 
 export const PersonalInfo = () => {
     const {
@@ -17,7 +17,7 @@ export const PersonalInfo = () => {
     
     return (
         <CentralizedWrapper>
-            <ProfileWrapper>
+            <div>
                 {profileImg  && (
                     <ProfileImageWrapper>
                         <img src={profileImg} alt='profile' />
@@ -26,11 +26,15 @@ export const PersonalInfo = () => {
                 <GreetingsWrapper>
                     <h1>안녕하세요,</h1>
                     <h1>{name}입니다</h1>
-                    {modifiers.length > 0 && (modifiers.map((modifier, idx) =>
-                        <p key={idx}>{modifier}</p>
-                    ))}
+                    {modifiers.length > 0 && (
+                        <VerticalListWithDots fontSize='1.3rem'>
+                            {modifiers.length > 0 && (modifiers.map((modifier, idx) =>
+                                <li key={idx}>{modifier}</li>
+                            ))}
+                        </VerticalListWithDots>
+                    )}
                 </GreetingsWrapper>
-            </ProfileWrapper>
+            </div>
             <ContactsWrapper>
                 {email && <li><span>Email</span> {email}</li>}
                 {githubUrl && <li><span>Github</span> {<a href={githubUrl}>{githubUrl}</a>}</li>}

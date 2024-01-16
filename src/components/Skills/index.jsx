@@ -1,7 +1,6 @@
+import { CentralizedWrapper, MainTitle, HorizontalTechStackList, VerticalListWithDots } from '../../styles/GlobalStyle';
 import userData from '../../data/db.json'
-import { CentralizedWrapper } from '../common/CentralizedWrapper'
-import { MainTitle } from '../common/MainTitle';
-import { StyledMainList, HorizontalList, SubTitle, VerticalList } from './index.styles';
+import { StyledMainList, SubTitle } from './index.styles';
 
 export const Skills = () => {
     const { skillSets } = userData;
@@ -12,7 +11,7 @@ export const Skills = () => {
             {skillSets.map((set, idx) => (
               <StyledMainList key={idx}>
                 <SubTitle>{set.category}</SubTitle>
-                <HorizontalList>
+                <HorizontalTechStackList>
                   {set.skills
                     .sort((a, b) => b.level - a.level)
                     .map(({ skill, level }, idx) => (
@@ -21,14 +20,14 @@ export const Skills = () => {
                         {/* {level && <div className='level'>{level}</div>} */}
                       </li>
                     ))}
-                </HorizontalList>
-                <VerticalList>
+                </HorizontalTechStackList>
+                <VerticalListWithDots>
                   {set.detail.length > 0 &&
                     set.detail.map((desc, idx) => (
                       <li key={idx}>{desc}</li>
                    ))
                   }
-                </VerticalList>
+                </VerticalListWithDots>
               </StyledMainList>
             ))}
         </CentralizedWrapper>

@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-
-export const ProfileWrapper = styled.div`
-
-`;
-
 export const ProfileImageWrapper = styled.div`
     width: 100px;
     height: 100px;
@@ -23,19 +18,19 @@ export const GreetingsWrapper = styled.div`
     line-height: 1.3rem;
     letter-spacing: 0.1rem;
 
-    & > p {
-        margin-top: 0.7rem;
-        opacity: 0.7;
+    & li {
+        margin-top: 0.6rem;
+        font-weight: 400;
     }
 
-    & > h1 { 	
+    & h1 { 	
         font-size: 4.0rem;
         line-height: 4.5rem;
         font-weight: 900;
     } 
 
     @media (max-width: 500px) {
-        & > h1 { 	
+        & h1 { 	
             font-size: 3.2rem;
             line-height: 3.5rem;
             font-weight: 900;

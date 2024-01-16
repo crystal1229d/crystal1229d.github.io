@@ -1,12 +1,10 @@
 import userData from '../../data/db.json';
 import noImage from '../../assets/images/noImage.png'
-import { CentralizedWrapper } from '../common/CentralizedWrapper'
-import { MainTitle } from '../common/MainTitle'
-import { TechStackBadge } from '../common/TechStackBadge';
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 import { FiBookOpen } from "react-icons/fi";
 import { HorizontalList, LinkWrapper, ProfileImageWrapper, ProjectItem, SmallP, StyledT1, StyledT3, VerticalList } from './index.styles';
+import { CentralizedWrapper, MainTitle, TechStackBadge } from '../../styles/GlobalStyle';
 
 export const Projects = () => {
     const { projects } = userData;

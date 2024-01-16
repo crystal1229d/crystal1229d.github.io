@@ -3,6 +3,7 @@
     "title": "Resume + Portfolio",
     "defaultLanguage": "English"
   },
+
   "personalInfo": {
     "name": "이수정",
     "modifiers": [ 
@@ -11,13 +12,15 @@
       "웹 프론트 엔지니어" 
     ], 
     "profileImg": "images/me.jpeg",
-    "email": "leecrytal1229d@gmail.com",
+    "email": "leecrystal1229d@gmail.com",
     "githubUrl": "https://github.com/crystal1229d", 
     "blogUrl": "", 
     "linkedInUrl": "https://www.linkedin.com/in/soojung-lee-437a2b1ba/", 
     "twitterUrl": "", 
     "facebookUrl": ""
   },
+
+  "introduction" : [], 
 
   "skillSets": [
     {
@@ -36,12 +39,14 @@
         "반응형 웹을 고려한 UI 를 구현할 수 잇습니다.", 
         "JavaScript ES6+ 문법을 준수합니다.", 
         "React에서 함수형 컴포넌트를 선호하며, 공통 로직이나 컴포넌트를 적절히 분리할 수 있습니다.", 
-        "테스트코드를 작성할 수 있습니다." 
+        "Testing Library를 사용해 테스트코드를 작성할 수 있습니다." 
       ], 
       "skills": [
         { "skill": "Javascript", "level": "5" },
         { "skill": "React", "level": "5" },
-        { "skill": "Typescript", "level": "2" }
+        { "skill": "Typescript", "level": "2" }, 
+        { "skill": "Jest", "level": "2" }, 
+        { "skill": "RTL", "level": "2" }
       ]
     },
     {
@@ -61,7 +66,7 @@
       "skills": [
         { "skill": "Git/Github" },
         { "skill": "Notion" },
-        { "skill": "Figma" }
+        { "skill": "Figma", "level": "2" }
       ]
     },
     {
@@ -89,7 +94,7 @@
           "name": "이모더 신규개발 및 유지보수", 
           "position": "Fullstack", 
           "term": "2019.01 - 2023.10", 
-          "description": "QR태깅을 통해 접속하여 주문/결제 가능한 테이블오더 웹앱. 초기 기획단계부터 참여하여 개발하고 4년 이상 유지보수한 프로젝트", 
+          "description": "QR태깅을 통해 접속하여 주문/결제 가능한 테이블오더 웹앱. 초기 기획단계부터 참여하여 개발하고 4년 이상 유지보수", 
           "tasks": [
             "매장/메뉴정보 조회, 주문, 결제(후불/선불), 멤버쉽 기능 등 개발", 
             "데이터베이스 설계 및 구축 참여", 
@@ -130,7 +135,7 @@
           "techStacks": ["JavaScript", "PHP", "MySQL"]
         }, 
         {
-          "name": "설문서비스 설문 생성 및 대시보드 API 개발", 
+          "name": "설문서비스 설문작성 및 대시보드 API 개발", 
           "position": "BackEnd", 
           "term": "2022.09 - 2022.11", 
           "description": "마니또와유(외식프랜차이즈 설문 서비스) 백오피스 설문템플릿/설문 생성 및 설문데이터 기반 대시보드 기능 개발. 9개 카테고리 별로 필터링된 설문 데이터를 다양한 차트로 그릴 수 있게끔 google chart 데이터 형식에 맞춰 데이터 가공", 
@@ -138,9 +143,9 @@
             "설문 템플릿/설문 생성, 설문데이터 기반 대시보드 기능 개발", 
             "데이터베이스 설계 및 구축 참여", 
             "API 개발",
-            "UI/UX 기획 일부 참여", 
-            "멤버 모두 프로젝트와 타 업무를 병행하고 있었으므로 효과적인 업무공유를 위한 자료 생성 및 공유", 
-            "설문템플릿에 대한 아이디어 제공 및 주도적으로 개발 - 설문템플릿 CRUD/설문으로 변경 기능 개발"
+            "화면 설계 일부 참여", 
+            "효과적인 업무공유를 위한 자료 생성 및 공유", 
+            "설문템플릿에 대한 아이디어 건의 및 주도적으로 개발 - 설문템플릿 CRUD/설문으로 변경 기능 개발"
           ], 
           "techStacks": ["PHP", "MySQL", "Google Chart"]
         }, 
@@ -201,7 +206,16 @@
     }
   ],
 
-  "educations": [
+  "RelavantExperiences": [], 
+
+  "foreignLanguages": [
+    {
+      "language": "영어",
+      "level": "비즈니스 회화 가능"
+    }
+  ], 
+
+  "education": [
     {
       "title": "동양미래대학교",
       "term": "2016.03 - 2019.03",

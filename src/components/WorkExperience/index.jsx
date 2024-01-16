@@ -1,8 +1,6 @@
 import userData from '../../data/db.json'
-import { CentralizedWrapper } from '../common/CentralizedWrapper';
-import { MainTitle } from '../common/MainTitle'
-import { TechStackBadge } from '../common/TechStackBadge';
-import { HorizontalList, LeftPane, ProjectItem, RightPane, SmallP, StyledT1, StyledT2, StyledT3, VerticalList, WorkWrapper } from './index.styles';
+import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, TechStackBadge, VerticalListWithDots } from '../../styles/GlobalStyle';
+import { LeftPane, ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
 
 export const WorkExperience = () => {
     const { workExperience } = userData;
@@ -12,39 +10,39 @@ export const WorkExperience = () => {
             <MainTitle>Work Experience</MainTitle>
             {workExperience.map((work, idx) => (
                 <WorkWrapper key={idx}>
-                    <LeftPane>
-                        <StyledT1>{work.name}</StyledT1>
-                        <SmallP>{work.position}</SmallP>
-                        <SmallP>{work.term}</SmallP>
+                    <div>
+                        <SubTitle>{work.name}</SubTitle>
+                        <SmallParagraph>{work.position}</SmallParagraph>
+                        <SmallParagraph>{work.term}</SmallParagraph>
                         {work.description && <p>{work.description}</p>}
-                        {work.url && (<p>{work.url}</p>)}
-                    </LeftPane>
-                    <RightPane>
+                        {work.url && (<SmallParagraph>{work.url}</SmallParagraph>)}
+                    </div>
+                    <div>
                         {work.projects.length > 0 && (
                             work.projects.map((project, p_idx) => (
                                 <ProjectItem key={p_idx}>
                                     <StyledT2>{project.name}</StyledT2>
-                                    <SmallP>{project.position}</SmallP>
-                                    <SmallP>{project.term}</SmallP>
+                                    <SmallParagraph>{project.position}</SmallParagraph>
+                                    <SmallParagraph>{project.term}</SmallParagraph>
                                     <StyledT3>Description</StyledT3>
                                     <p>{project.description}</p>
                                     <StyledT3>What Did I do</StyledT3>
-                                    <VerticalList>
+                                    <VerticalListWithDots fontSize='0.9rem'>
                                         {project.tasks.map((task, t_idx) => (
                                             <li key={t_idx}>{task}</li>
                                         ))}
-                                    </VerticalList>
+                                    </VerticalListWithDots>
                                     <StyledT3>Tech Stacks</StyledT3>
-                                    <HorizontalList>
+                                    <HorizontalTechStackList>
                                         {project.techStacks.length > 0 && 
                                             project.techStacks.map((stack, s_idx) => (
                                                 <li><TechStackBadge key={s_idx}>{stack}</TechStackBadge></li>
                                         ))}
-                                    </HorizontalList>
+                                    </HorizontalTechStackList>
                                 </ProjectItem>
                             )
                         ))}
-                    </RightPane>
+                    </div>
                 </WorkWrapper>
             ))}
         </CentralizedWrapper>
