@@ -1,5 +1,6 @@
 import userData from '../../data/db.json';
-import { CentralizedWrapper } from '../../styles/GlobalStyle';
+import { CentralizedWrapper, MainTitle } from '../../styles/GlobalStyle';
+import { EducationList } from './index.styles';
 
 
 export const Education = () => {
@@ -8,9 +9,16 @@ export const Education = () => {
     if (!education || education.length === 0) return;
     return (
         <CentralizedWrapper>
-            {education.map((edu, idx) => (
-                <div key={idx}>{edu.title}</div>       
-            ))}
+            <MainTitle>Education</MainTitle>
+            <EducationList>
+                {education.map((edu, idx) => (
+                    <li key={idx}>
+                        <h2>{edu.title}</h2>
+                        <p>{edu.term}</p>
+                        <p>{edu.description}</p>
+                    </li>  
+                ))}
+            </EducationList>
         </CentralizedWrapper>
     )
 }
