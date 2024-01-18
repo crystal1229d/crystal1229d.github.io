@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
         overflow-wrap: break-word;
         word-break: keep-all;
     }
+    body {
+        background-color: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.fontColor};
+    }
 `;
 export default GlobalStyle;
 
@@ -42,6 +46,7 @@ export const HorizontalTechStackList = styled(HorizontalList)`
         padding: 3px 8px;
         background-color: ${({ theme }) => theme.colors.codeBg};
         border-radius: 6px;
+        color: ${({ theme }) => theme.colors.techStackFontColor};
     }
     & > li.expert {
         font-weight: 600;
@@ -86,6 +91,7 @@ export const TechStackBadge = styled.span`
     padding: 3px 8px;
     background-color: ${({ theme }) => theme.colors.codeBg};
     border-radius: 6px;
+    color: ${({ theme }) => theme.colors.techStackFontColor};
 `;
 
 export const MainTitle = styled.h1`

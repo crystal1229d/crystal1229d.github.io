@@ -8,24 +8,30 @@ const fontSizes = {
     small: pixelToRem(15), 
 }
 
-const colors = {
-    black: '#000000', 
-    gray: '#3B3B3B', 
-    blue: '#3a7bd5', 
-    codeBg: '#f7f2ec' 
-}
-
-const common = {
-    centralized: `
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `, 
-}
-
-const theme = {
+export const darkTheme = {
     fontSizes, 
-    colors, 
-    common, 
+    colors: {
+        black: '#000000', 
+        gray: '#3B3B3B', 
+        blue: '#3a7bd5', 
+        background: '#1F2122', 
+        fontColor: '#FFFFFF', 
+        techStackFontColor: '#000000', 
+        codeBg: '#f7f2ec', 
+        toggleBg: 'linear-gradient(40deg, #8983F7, #A3DAFB 70%)', 
+    } 
 }
-export default theme;
+
+export const lightTheme = {
+    fontSizes, 
+    colors: {
+        black: '#000000', 
+        gray: '#3B3B3B', 
+        blue: '#3a7bd5', 
+        background: '#FFFFFF', 
+        fontColor: '#000000', 
+        techStackFontColor: '#FFFFFF', 
+        codeBg: '#f7f2ec', 
+        toggleBg: 'linear-gradient(40deg, #FF0080,#FF8C00 70%)', 
+    } 
+}
