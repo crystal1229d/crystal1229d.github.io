@@ -46,7 +46,7 @@ export const HorizontalTechStackList = styled(HorizontalList)`
         padding: 3px 8px;
         background-color: ${({ theme }) => theme.colors.codeBg};
         border-radius: 6px;
-        color: ${({ theme }) => theme.colors.techStackFontColor};
+        color: ${({ theme }) => theme.colors.black};
     }
     & > li.expert {
         font-weight: 600;
@@ -91,7 +91,7 @@ export const TechStackBadge = styled.span`
     padding: 3px 8px;
     background-color: ${({ theme }) => theme.colors.codeBg};
     border-radius: 6px;
-    color: ${({ theme }) => theme.colors.techStackFontColor};
+    color: ${({ theme }) => theme.colors.black};
 `;
 
 export const MainTitle = styled.h1`

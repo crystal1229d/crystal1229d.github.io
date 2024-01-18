@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 
 export const NavBarWrapper = styled.nav`
-    width: 100%;
+    width: 60vw;
     height: 100px;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    
+    overflow: hidden;
 
-    border: 1px solid black;
+    @media (max-width: 1200px) {
+        width: 80vw;
+    }
+    @media (max-width: 750px) {
+        width: 97vw;
+    }
 `;
 
 export const ToggleButton = styled.button`
