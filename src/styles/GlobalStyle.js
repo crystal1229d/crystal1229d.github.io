@@ -62,7 +62,7 @@ export const VerticalList = styled.ul`
     margin: 0.8rem 0;
     gap: 0.8rem;
     font-size: ${(props) => props.fontSize ? props.fontSize : "1.0rem"};
-    line-height: 1.0rem;
+    line-height: 110%;
 
     & li {
         display: flex;

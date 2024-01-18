@@ -15,7 +15,7 @@ export const ProfileImageWrapper = styled.div`
 export const GreetingsWrapper = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
-    line-height: 1.3rem;
+    line-height: 110%;
     letter-spacing: 0.1rem;
 
     & li {
