@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const NavBarWrapper = styled.nav`
     width: 60vw;
+    max-width: 97vw;
     height: 70px;
     margin: 10px auto;
     display: flex;
