@@ -1,9 +1,24 @@
-import userData from '../../data/db.json'
+import { useEffect, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
 
 export const WorkExperience = () => {
-    const { workExperience } = userData;
+    const { currentLanguage } = useLanguage();
+    const [workExperience, setWorkExperience] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await import(`../../data/db.${currentLanguage}.json`);
+                setWorkExperience(data.workExperience);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, [currentLanguage]);
 
     if (!workExperience || workExperience.length === 0) return;
     return (

@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const NavBarWrapper = styled.nav`
     width: 60vw;
-    height: 100px;
+    height: 70px;
     margin: 10px auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     overflow: hidden;
 
     @media (max-width: 1200px) {
@@ -19,6 +18,23 @@ export const NavBarWrapper = styled.nav`
     }
 `;
 
+export const LanguageSelector = styled.select`
+    width: fit-content;
+    height: 30px;
+    font-size: 0.8rem;
+    text-align: center;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+    cursor: pointer;
+
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.fontColor};
+`;
+       
 export const ToggleButton = styled.button`
     width: 50px;
     height: 50px;

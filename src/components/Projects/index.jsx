@@ -1,13 +1,28 @@
-import userData from '../../data/db.json';
-import noImage from '../../assets/images/noImage.png'
+import { useEffect, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
+import { CentralizedWrapper, MainTitle, SubTitle, SmallParagraph, VerticalListWithDots, HorizontalTechStackList } from '../../styles/GlobalStyle';
+import { LinkWrapper, ProjectItem, StyledT3 } from './index.styles';
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 import { FiBookOpen } from "react-icons/fi";
-import { LinkWrapper, ProjectItem, StyledT3 } from './index.styles';
-import { CentralizedWrapper, MainTitle, SubTitle, SmallParagraph, VerticalListWithDots, HorizontalTechStackList } from '../../styles/GlobalStyle';
+import noImage from '../../assets/images/noImage.png'
 
 export const Projects = () => {
-    const { projects } = userData;
+    const { currentLanguage } = useLanguage();
+    const [projects, setProjects] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await import(`../../data/db.${currentLanguage}.json`);
+                setProjects(data.projects);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, [currentLanguage]);
 
     if (!projects || projects.length === 0) return;
     return (

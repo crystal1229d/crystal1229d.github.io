@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "title": "Resume + Portfolio",
+    "language": "en"
+  },
+
+  "personalInfo": {
+    "name": "Soojung Lee",
+    "modifiers": [ 
+      "Web FrontEnd Engineer", 
+      "focusing on the goals that the team and the product aim to achieve", 
+      "with diverse experience in developing e-commerce websites" 
+    ], 
+    "profileImg": "images/me.jpeg",
+    "email": "leecrystal1229d@gmail.com",
+    "githubUrl": "https://github.com/crystal1229d", 
+    "blogUrl": "", 
+    "linkedInUrl": "https://www.linkedin.com/in/soojung-lee-437a2b1ba", 
+    "twitterUrl": "", 
+    "facebookUrl": ""
+  },
+
+  "introduction" : [], 
+
+  "skillSets": [
+    {
+      "category": "Overall", 
+      "detail": [
+        "I am passionate about creating beautiful and user-friendly UI/UX.", 
+        "Through diverse projects, I've learned importance of teamwork and made efforts to communicate effectively.", 
+        "I focus on the goals of my team and products."
+      ], 
+      "skills": []
+    }, 
+    {
+      "category": "Front End",
+      "detail": [
+        "I keep the Web Standard through Semantic Markup.",
+        "I make UI considers Responsive Web.", 
+        "I use ECMAScript6.", 
+        "I prefer Functional Component in React and can properly separate common logic or components.", 
+        "I can write test codes using Testing Libraries." 
+      ], 
+      "skills": [
+        { "skill": "Javascript", "level": "5" },
+        { "skill": "React", "level": "5" },
+        { "skill": "Typescript", "level": "2" }, 
+        { "skill": "Jest", "level": "2" }, 
+        { "skill": "RTL", "level": "2" }
+      ]
+    },
+    {
+      "category": "Back End",
+      "detail": [
+        "I have 4+ years of experience in PHP and MySQL.", 
+        "I have 4+ years of experience in both SQL and NoSQL, with a stronger proficiency in SQL."
+      ], 
+      "skills": [
+        { "skill": "php", "level": "3" },
+        { "skill": "mysql", "level": "3" }
+      ]
+    },
+    {
+      "category": "Communication",
+      "detail": [], 
+      "skills": [
+        { "skill": "Git/Github" },
+        { "skill": "Notion" },
+        { "skill": "Figma", "level": "2" }
+      ]
+    },
+    {
+      "category": "Etc",
+      "detail": [
+        "I have experience deploying personal projects using Netlify, Vercel, and AWS."
+      ], 
+      "skills": [
+        { "skill": "Netlify" },
+        { "skill": "Vercel" } 
+      ]
+    }
+  ],
+
+  "workExperience": [
+    {
+      "name": "Secuprime", 
+      "position": "Fullstack", 
+      "term": "2019. 01 - 2023. 10", 
+      "months": "58", 
+      "description": "", 
+      "url": "", 
+      "projects": [
+        {
+          "name": "Development & Maintenance of EMOrder", 
+          "position": "Fullstack", 
+          "term": "2019.01 - 2023.10", 
+          "description": "Involved in the development and maintenance of a Table Order web application that enables ordering and payment through QR code tagging. Engaged in the project from the initial planning stages and provided ongoing support for over four years", 
+          "tasks": [
+            "Developed features: store/menu information retrieval, order placement, payment (postpaid/prepaid), and membership", 
+            "Participated in the design and construction of the database", 
+            "Developed APIs",
+            "Implemented user interfaces", 
+            "Integrated POS system and payment gateway modules (one-time/subscription)",  
+            "Developed features: location-based nearby store listings, and checking delivery availability by integrating MapAPI", 
+            "Unified code conventions and improved code readability as part of the codebase enhancement for the expansion of EMOrder (for ver.Tablet and ver.Vue)", 
+            "Suggested the implementation of EMOder(ver.React) and presented the proposal internally"
+          ], 
+          "techStacks": ["JavaScript", "PHP", "MySQL"]
+        }, 
+        {
+          "name": "Developed Start-EMOrder", 
+          "position": "Fullstack", 
+          "term": "2019.02 - 2019.06", 
+          "description": "Contributed to the development of EMOrder Back Office system(previous version) which provides features such as menu information management and basic POS data reception. Involved in the project from the initial planning stages", 
+          "tasks": [
+            "Developed functionalities: login/logout and CRUD for store/menu information", 
+            "Participated in the design and construction of the database", 
+            "Developed APIs",
+            "Implemented user interfaces" 
+          ], 
+          "techStacks": ["JavaScript", "PHP", "MySQL"]
+        }, 
+        {
+          "name": "Developed Membership System(Point/Stamp/Coupont)", 
+          "position": "Fullstack", 
+          "term": "2019.10 - 2020.01", 
+          "description": "Developed features allowing customers logged in to view, earn, and use points/coupons/stamps. Implemented custom functionalities for each store, such as customizing accrual rates and usage units.", 
+          "tasks": [
+            "Developed functionalities: login and view/earn/use/custom points/coupons/stamps", 
+            "Participated in the design and construction of the database", 
+            "Developed APIs",
+            "Implemented user interfaces", 
+            "Integrated API for KIOSK CRM"
+          ], 
+          "techStacks": ["JavaScript", "PHP", "MySQL"]
+        }, 
+        {
+          "name": "Developed APIs for creating surveys and dashboards in the survey service", 
+          "position": "BackEnd", 
+          "term": "2022.09 - 2022.11", 
+          "description": "Developed back-office functionalities for Manitto&You, a dining franchise survey service, including the creation of survey templates, survey data-based dashboard, and filtering survey data by 9 categories. Processed data into Google Chart format, enabling visualization through various charts", 
+          "tasks": [
+            "Developed features: creating survey templates, generating surveys, and building a dashboard based on survey data.", 
+            "Participated in the design and construction of the database", 
+            "Developed APIs",
+            "Participated in Implementing user interfaces", 
+            "Created and shared diagrams and documents for effective task collaboration", 
+            "Suggested ideas for 'survey template' and took the lead in developing features for survey template CRUD and conversion to surveys"
+          ], 
+          "techStacks": ["PHP", "MySQL", "Google Chart"]
+        }, 
+        {
+          "name": "Developed a custom table order system for dining franchises", 
+          "position": "Fullstack", 
+          "term": "2020.11 - 2023.06", 
+          "description": "Developed a service by retaining the basic framework of EMOder but introducing changes to UI/UX and modifying or adding features. Collaborated with various businesses including KangkangSullae, SotdaeChon, Cheonggawon, OB Beer, Whoneed Appendix Cafe, and Brandco", 
+          "tasks": [
+            "Participated in the design and construction of the database", 
+            "Developed APIs",
+            "Implemented user interfaces",
+            "Integrated POS inventory system" 
+          ], 
+          "techStacks": ["JavaScript", "PHP", "MySQL"]
+        }, 
+        {
+          "name": "Developed integrated APIs for EMOderAdmin", 
+          "position": "BackEnd", 
+          "term": "2021.05 - 2021.10", 
+          "description": "Developed functionalities for EMOder Back Office (current version), including managing store information/menu and querying sales/customer data", 
+          "tasks": [
+            "Participated in the design and construction of the database", 
+            "Developed APIs"
+          ], 
+          "techStacks": ["PHP", "MySQL"]
+        }, 
+        {
+          "name": "Developed APIs for product tagging and payment in Smart Unmanned Refrigerator", 
+          "position": "BackEnd", 
+          "term": "2021.05 - 2021.10", 
+          "description": "Developed an API for tag management and instant payment(customers can take items out of the refrigerator without tagging barcode or paying process)", 
+          "tasks": [ 
+            "Developed APIs"
+          ], 
+          "techStacks": ["PHP", "MySQL"]
+        }
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "imgUrl": "images/mandalart_01.png",
+      "githubUrl": "https://github.com/crystal1229d/mandal-art",
+      "projectUrl": "",
+      "blogUrl": "", 
+      "title": "Mandalart",
+      "member": "Personal", 
+      "position": "Fullstack",
+      "term": "2024.01.11 - 2024.01.12 (v1.0.0)",
+      "description": "New Year Greetings Mandalart Short-term Project",
+      "attribution": [
+        "develop functionalities : Create Mandalart/Initialize/Export to Image", 
+        "conduct unit tests for key functionalities"
+      ],
+      "techStacks": ["React", "Styled-component", "Jest", "React-Testing-Library"]
+    }
+  ],
+
+  "RelavantExperiences": [], 
+
+  "foreignLanguages": [
+    {
+      "language": "English",
+      "level": "business communication available"
+    }
+  ], 
+
+  "education": [
+    {
+      "title": "Dongyang Mirae University (College Bachelor's Degree)",
+      "term": "2016.03 - 2019.03",
+      "description": "Computer Software Engineering"
+    },
+    {
+      "title": "Dongyang Mirae University (Bachelor's Degree)",
+      "term": "2019.03 - 2020.03",
+      "description": "Computer Software Engineering"
+    }
+  ]
+}

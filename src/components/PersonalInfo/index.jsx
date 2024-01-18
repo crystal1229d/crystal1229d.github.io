@@ -1,19 +1,38 @@
+import { useEffect, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { CentralizedWrapper, VerticalListWithDots } from '../../styles/GlobalStyle';
-import userData from '../../data/db.json'
 import { ContactsWrapper, GreetingsWrapper, ProfileImageWrapper } from './index.styles';
 
 export const PersonalInfo = () => {
+    const { currentLanguage } = useLanguage();
+    const { t } = useTranslation();
+    const [personalInfo, setPersonalInfo] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await import(`../../data/db.${currentLanguage}.json`);
+                setPersonalInfo(data.personalInfo);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, [currentLanguage, t]);
+    
+    if (!personalInfo) return;
+
     const {
-        personalInfo: {
-            name,
-            profileImg, 
-            modifiers, 
-            email,
-            githubUrl, 
-            blogUrl, 
-            linkedInUrl, 
-        },
-    } = userData;
+        name,
+        profileImg, 
+        modifiers, 
+        email,
+        githubUrl, 
+        blogUrl, 
+        linkedInUrl, 
+    } = personalInfo;
     
     return (
         <CentralizedWrapper>
@@ -24,8 +43,8 @@ export const PersonalInfo = () => {
                     </ProfileImageWrapper>
                 )}
                 <GreetingsWrapper>
-                    <h1>안녕하세요,</h1>
-                    <h1>{name}입니다</h1>
+                    <h1>{t('introduction')}</h1>
+                    <h1>{currentLanguage === 'en' && t('with-name')}{name}{currentLanguage === 'ko' && t('with-name')}</h1>
                     {modifiers.length > 0 && (
                         <VerticalListWithDots fontSize='1.3rem'>
                             {modifiers.length > 0 && (modifiers.map((modifier, idx) =>

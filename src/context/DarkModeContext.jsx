@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const DarkModeContext = createContext();
 
-export function DarkModeProvider ({ children }) {
+export const  DarkModeContextProvider = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
 
     const toggleDarkMode = () => {
@@ -28,13 +28,11 @@ export function DarkModeProvider ({ children }) {
 
 function switchDarkMode(darkTheme) {
     if (darkTheme) {
-        document.body.setAttribute('data-theme', 'dark-mode');
+        // document.body.setAttribute('data-theme', 'dark-mode');
         localStorage.theme = 'dark';
-        console.log('dark')
     } else {
-        document.body.removeAttribute('data-theme');
+        // document.body.removeAttribute('data-theme');
         localStorage.theme = 'light';
-        console.log('light')
     }
 }
 

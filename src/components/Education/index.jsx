@@ -1,10 +1,25 @@
-import userData from '../../data/db.json';
+import { useEffect, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 import { CentralizedWrapper, MainTitle } from '../../styles/GlobalStyle';
 import { EducationList } from './index.styles';
 
 
 export const Education = () => {
-    const { education } = userData;
+    const { currentLanguage } = useLanguage();
+    const [education, setEducation] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await import(`../../data/db.${currentLanguage}.json`);
+                setEducation(data.education);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, [currentLanguage]);
 
     if (!education || education.length === 0) return;
     return (
