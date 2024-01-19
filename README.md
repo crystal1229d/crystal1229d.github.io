@@ -15,6 +15,8 @@
   <br /><br />
 </div>
 
+## [Link <<](https://crystal1229d.github.io/resu-folio/)
+
 ## Preview
 <img src='./public/README/resufolio.gif' alt='preview' />
 
@@ -32,6 +34,7 @@
 - [`React`](https://reactjs.org/)
 - [`styled-components`](https://styled-components.com/)
 - [`i18n`](https://www.i18next.com/)
+- [`GitHub Pages`](https://pages.github.com/)
 
 <br />
 

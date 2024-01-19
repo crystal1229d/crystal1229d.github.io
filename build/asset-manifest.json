@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/resu-folio/static/css/main.3ec91feb.css",
+    "main.js": "/resu-folio/static/js/main.c6f549e0.js",
+    "static/js/782.09cecdc1.chunk.js": "/resu-folio/static/js/782.09cecdc1.chunk.js",
+    "static/js/703.2d5ced3e.chunk.js": "/resu-folio/static/js/703.2d5ced3e.chunk.js",
+    "static/media/noImage.png": "/resu-folio/static/media/noImage.84b12b0b9c2fedde390e.png",
+    "index.html": "/resu-folio/index.html",
+    "main.3ec91feb.css.map": "/resu-folio/static/css/main.3ec91feb.css.map",
+    "main.c6f549e0.js.map": "/resu-folio/static/js/main.c6f549e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ec91feb.css",
+    "static/js/main.c6f549e0.js"
+  ]
+}
