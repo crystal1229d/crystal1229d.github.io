@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # resu-folio
 ✨ Resume + Portfolio 📄
-=======
 <div align='center'>
 
   <img src='./public/logo.png' alt='logo' />
@@ -52,4 +50,3 @@
 ## License
 
 - [`MIT License`]('./LICENSE')
->>>>>>> master
