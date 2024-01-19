@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+import useDataFetching from '../../hooks/useDataFetching';
 import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
 
 export const WorkExperience = () => {
-    const { currentLanguage } = useLanguage();
-    const [workExperience, setWorkExperience] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await import(`../../data/db.${currentLanguage}.json`);
-                setWorkExperience(data.workExperience);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchData();
-    }, [currentLanguage]);
+    const workExperience = useDataFetching('workExperience');
 
     if (!workExperience || workExperience.length === 0) return;
     return (

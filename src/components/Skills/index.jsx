@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+import useDataFetching from '../../hooks/useDataFetching';
 import { CentralizedWrapper, MainTitle, HorizontalTechStackList, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { StyledMainList, SubTitle } from './index.styles';
 
 export const Skills = () => {
-  const { currentLanguage } = useLanguage();
-  const [skillSets, setSkillSets] = useState(null);
-
-  useEffect(() => {
-      const fetchData = async () => {
-          try {
-              const data = await import(`../../data/db.${currentLanguage}.json`);
-              setSkillSets(data.skillSets);
-          } catch (error) {
-              console.error(error);
-          }
-      };
-
-      fetchData();
-  }, [currentLanguage]);
+  const skillSets = useDataFetching('skillSets');
 
   if (!skillSets || skillSets.length === 0) return;
     return (

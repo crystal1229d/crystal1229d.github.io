@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+import useDataFetching from '../../hooks/useDataFetching';
 import { CentralizedWrapper, MainTitle, SubTitle, SmallParagraph, VerticalListWithDots, HorizontalTechStackList } from '../../styles/GlobalStyle';
 import { LinkWrapper, ProjectItem, StyledT3 } from './index.styles';
 import { FaGithub } from "react-icons/fa";
@@ -8,21 +7,7 @@ import { FiBookOpen } from "react-icons/fi";
 import noImage from '../../assets/images/noImage.png'
 
 export const Projects = () => {
-    const { currentLanguage } = useLanguage();
-    const [projects, setProjects] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await import(`../../data/db.${currentLanguage}.json`);
-                setProjects(data.projects);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchData();
-    }, [currentLanguage]);
+    const projects = useDataFetching('projects');
 
     if (!projects || projects.length === 0) return;
     return (

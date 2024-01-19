@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const NavBarWrapper = styled.nav`
     width: 60vw;
     max-width: 97vw;
-    height: 70px;
-    margin: 10px auto;
+    height: 180px;
+    margin: 20px auto 20px auto;
     display: flex;
-    align-items: center;
+    align-items: space-start;
     justify-content: space-between;
     gap: 20px;
     overflow: hidden;

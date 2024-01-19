@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import useDataFetching from '../../hooks/useDataFetching';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { CentralizedWrapper, VerticalListWithDots } from '../../styles/GlobalStyle';
@@ -7,20 +7,7 @@ import { ContactsWrapper, GreetingsWrapper, ProfileImageWrapper } from './index.
 export const PersonalInfo = () => {
     const { currentLanguage } = useLanguage();
     const { t } = useTranslation();
-    const [personalInfo, setPersonalInfo] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await import(`../../data/db.${currentLanguage}.json`);
-                setPersonalInfo(data.personalInfo);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchData();
-    }, [currentLanguage, t]);
+    const personalInfo = useDataFetching('personalInfo');
     
     if (!personalInfo) return;
 
