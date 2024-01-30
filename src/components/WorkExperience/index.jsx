@@ -1,8 +1,10 @@
+import { useUnderline } from '../../context/UnderlineContext';
 import useDataFetching from '../../hooks/useDataFetching';
 import { CentralizedWrapper, HorizontalTechStackList, MainTitle, SmallParagraph, SubTitle, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { ProjectItem, StyledT2, StyledT3, WorkWrapper } from './index.styles';
 
 export const WorkExperience = () => {
+      const { wrapWithUnderline } = useUnderline();
     const workExperience = useDataFetching('workExperience');
 
     if (!workExperience || workExperience.length === 0) return;
@@ -15,7 +17,7 @@ export const WorkExperience = () => {
                         <SubTitle>{work.name}</SubTitle>
                         <SmallParagraph>{work.position}</SmallParagraph>
                         <SmallParagraph>{work.term}</SmallParagraph>
-                        {work.description && <p>{work.description}</p>}
+                        {work.description && <p>{wrapWithUnderline(work.description)}</p>}
                         {work.url && (<SmallParagraph>{work.url}</SmallParagraph>)}
                     </div>
                     <div>
@@ -26,11 +28,11 @@ export const WorkExperience = () => {
                                     <SmallParagraph>{project.position}</SmallParagraph>
                                     <SmallParagraph>{project.term}</SmallParagraph>
                                     <StyledT3>Description</StyledT3>
-                                    <p>{project.description}</p>
+                                    <p>{wrapWithUnderline(project.description)}</p>
                                     <StyledT3>What Did I do</StyledT3>
                                     <VerticalListWithDots fontSize='0.9rem'>
                                         {project.tasks.map((task, t_idx) => (
-                                            <li key={t_idx}>{task}</li>
+                                            <li key={t_idx}>{wrapWithUnderline(task)}</li>
                                         ))}
                                     </VerticalListWithDots>
                                     <StyledT3>Tech Stacks</StyledT3>

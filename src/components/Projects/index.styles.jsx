@@ -68,6 +68,7 @@ export const LinkWrapper = styled.div`
 
     a {
         color: inherit;
+        margin-right: 0.5rem;
     }
 `;
 

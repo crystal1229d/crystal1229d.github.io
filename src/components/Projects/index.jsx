@@ -4,8 +4,10 @@ import { LinkWrapper, ProjectItem, StyledT3 } from './index.styles';
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 import { FiBookOpen } from "react-icons/fi";
+import { useUnderline } from '../../context/UnderlineContext';
 
 export const Projects = () => {
+    const { wrapWithUnderline } = useUnderline();
     const projects = useDataFetching('projects');
 
     if (!projects || projects.length === 0) return;
@@ -22,7 +24,7 @@ export const Projects = () => {
                             {project.description !== '' && (
                                 <>
                                     <StyledT3>Description</StyledT3>
-                                    <p>{project.description}</p>
+                                    <p>{wrapWithUnderline(project.description)}</p>
                                 </>
                             )}
                             {project.attribution.length > 0 && (
@@ -30,7 +32,7 @@ export const Projects = () => {
                                     <StyledT3>What Did I do</StyledT3>
                                     <VerticalListWithDots fontSize='0.9rem'>
                                         {project.attribution.map((task, task_idx) => (
-                                            <li key={task_idx}>{task}</li>
+                                            <li key={task_idx}>{wrapWithUnderline(task)}</li>
                                         ))}
                                     </VerticalListWithDots>
                                 </>
