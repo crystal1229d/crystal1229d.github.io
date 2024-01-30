@@ -40,8 +40,7 @@
 
 ## TODO
 
-- 이력서 데이터 수정
-- 프로필 이미지 필요하다면 추가 
+- 프로필 이미지 등록 
 - ForeignLanguage 필요하다면 추가 작업 
 - TechStack Badge 화면 width 줄였을 때 글자가 다음줄로 넘어가면 width 가 줄어든 글자에 맞춰지지않는 문제 수정 
 - floating index navbar 에 대한 고민. 
