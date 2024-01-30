@@ -4,7 +4,6 @@ import { LinkWrapper, ProjectItem, StyledT3 } from './index.styles';
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 import { FiBookOpen } from "react-icons/fi";
-import noImage from '../../assets/images/noImage.png'
 
 export const Projects = () => {
     const projects = useDataFetching('projects');
@@ -61,7 +60,7 @@ export const Projects = () => {
                                 )
                             }
                         </div>
-                        <img src={project.imgUrl === '' ? noImage : project.imgUrl} alt='project' />
+                        {project.imgUrl && <img src={project.imgUrl} alt='project' />}
                     </ProjectItem>
                 ))}
             </ul>

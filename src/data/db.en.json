@@ -38,7 +38,7 @@
         "I keep the Web Standard through Semantic Markup.",
         "I make UI considers Responsive Web.", 
         "I use ECMAScript6.", 
-        "I prefer Functional Component in React and can properly separate common logic or components.", 
+        "I can properly separate common logic or components in React.", 
         "I can write test codes using Testing Libraries." 
       ], 
       "skills": [
@@ -203,6 +203,41 @@
         "conduct unit tests for key functionalities"
       ],
       "techStacks": ["React", "Styled-component", "Jest", "React-Testing-Library"]
+    }, 
+    {
+      "imgUrl": "",
+      "githubUrl": "https://github.com/crystal1229d/resu-folio",
+      "projectUrl": "https://crystal1229d.github.io/resu-folio/",
+      "blogUrl": "", 
+      "title": "resu-folio",
+      "member": "Personal", 
+      "position": "Fullstack",
+      "term": "2024.01.12 - 2024.01.19 (v1.0.1)",
+      "description": "personal resume/portfolio web page",
+      "attribution": [
+        "dark/light theme",
+        "Multilingual Support (ENG/KOR)"
+      ],
+      "techStacks": ["React", "Styled-component", "i18n", "github-pages"]
+    }, 
+    {
+      "imgUrl": "",
+      "githubUrl": "https://github.com/crystal1229d/post-card",
+      "projectUrl": "",
+      "blogUrl": "", 
+      "title": "AI Post Card",
+      "member": "Personal", 
+      "position": "Fullstack",
+      "term": "2024.01.20 - 2024.01.28 (v1.0.0)",
+      "description": "A service that allows users to decorate a postcard, write a message, and then the AI draws an appropriate illustration",
+      "attribution": [
+        "Message Writing",
+        "Postcard Customization", 
+        "Image Customization (By AI)", 
+        "Export PostCard to Image", 
+        "Share PostCard on SNS"
+      ],
+      "techStacks": ["React", "Next.js", "TypeScript", "Zustand", "Tailwind CSS", "Konsta", "Spline"]
     }
   ],
 

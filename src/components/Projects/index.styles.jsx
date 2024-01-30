@@ -7,6 +7,7 @@ export const ProjectItem = styled.li`
     flex-direction: row;
     gap: 10px;
     margin-top: 1.0rem;
+    margin-bottom: 2.0rem;
     font-size: 0.9rem;
     border-left: 1px solid #3a7bd5;
 
