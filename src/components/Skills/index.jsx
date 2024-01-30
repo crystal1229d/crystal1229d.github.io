@@ -1,8 +1,11 @@
+import { useUnderline } from '../../context/UnderlineContext';
 import useDataFetching from '../../hooks/useDataFetching';
 import { CentralizedWrapper, MainTitle, HorizontalTechStackList, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { StyledMainList, SubTitle } from './index.styles';
 
 export const Skills = () => {
+  const { wrapWithUnderline } = useUnderline();
+
   const skillSets = useDataFetching('skillSets');
 
   if (!skillSets || skillSets.length === 0) return;
@@ -25,7 +28,7 @@ export const Skills = () => {
                 <VerticalListWithDots>
                   {set.detail.length > 0 &&
                     set.detail.map((desc, idx) => (
-                      <li key={idx}>{desc}</li>
+                      <li key={idx}>{wrapWithUnderline(desc)}</li>
                    ))
                   }
                 </VerticalListWithDots>

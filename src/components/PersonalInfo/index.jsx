@@ -3,8 +3,11 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { CentralizedWrapper, VerticalListWithDots } from '../../styles/GlobalStyle';
 import { ContactsWrapper, GreetingsWrapper, ProfileImageWrapper } from './index.styles';
+import { useUnderline } from '../../context/UnderlineContext';
 
 export const PersonalInfo = () => {
+    const { wrapWithUnderline } = useUnderline();
+
     const { currentLanguage } = useLanguage();
     const { t } = useTranslation();
     const personalInfo = useDataFetching('personalInfo');
@@ -35,7 +38,7 @@ export const PersonalInfo = () => {
                     {modifiers.length > 0 && (
                         <VerticalListWithDots fontSize='1.3rem'>
                             {modifiers.length > 0 && (modifiers.map((modifier, idx) =>
-                                <li key={idx}>{modifier}</li>
+                                <li key={idx}>{wrapWithUnderline(modifier)}</li>
                             ))}
                         </VerticalListWithDots>
                     )}

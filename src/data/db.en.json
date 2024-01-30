@@ -9,7 +9,7 @@
     "modifiers": [ 
       "Web FrontEnd Engineer", 
       "focusing on the goals that the team and the product aim to achieve", 
-      "with diverse experience in developing e-commerce websites" 
+      "<u>with diverse experience in developing e-commerce websites</u>" 
     ], 
     "profileImg": "",
     "email": "leecrystal1229d@gmail.com",
@@ -38,13 +38,16 @@
         "I keep the Web Standard through Semantic Markup.",
         "I make UI considers Responsive Web.", 
         "I use ECMAScript6.", 
-        "I can properly separate common logic or components in React.", 
-        "I can write test codes using Testing Libraries." 
+        "<u>I can properly separate common logic or components in React.</u>", 
+        "I can write test codes using Testing Libraries.", 
+        "I can use various styling libraries including Styled-Components, Tailwind, and more."
       ], 
       "skills": [
         { "skill": "Javascript", "level": "5" },
         { "skill": "React", "level": "5" },
         { "skill": "Typescript", "level": "2" }, 
+        { "skill": "Next.js", "level": "2" }, 
+        { "skill": "Styling Libraries", "level": "5" }, 
         { "skill": "Jest", "level": "2" }, 
         { "skill": "RTL", "level": "2" }
       ]
@@ -94,9 +97,9 @@
           "name": "Development & Maintenance of EMOrder", 
           "position": "Fullstack", 
           "term": "2019.01 - 2023.10", 
-          "description": "Involved in the development and maintenance of a Table Order web application that enables ordering and payment through QR code tagging. Engaged in the project from the initial planning stages and provided ongoing support for over four years", 
+          "description": "<u>Involved in the development and maintenance of a Table Order web application that enables ordering and payment through QR code tagging. Engaged in the project from the initial planning stages and provided ongoing support for over four years</u>", 
           "tasks": [
-            "Developed features: store/menu information retrieval, order placement, payment (postpaid/prepaid), and membership", 
+            "<u>Developed features: store/menu information retrieval, order placement, payment (postpaid/prepaid), and membership</u>", 
             "Participated in the design and construction of the database", 
             "Developed APIs",
             "Implemented user interfaces", 
@@ -126,7 +129,7 @@
           "term": "2019.10 - 2020.01", 
           "description": "Developed features allowing customers logged in to view, earn, and use points/coupons/stamps. Implemented custom functionalities for each store, such as customizing accrual rates and usage units.", 
           "tasks": [
-            "Developed functionalities: login and view/earn/use/custom points/coupons/stamps", 
+            "<u>Developed functionalities: login and view/earn/use/custom points/coupons/stamps</u>", 
             "Participated in the design and construction of the database", 
             "Developed APIs",
             "Implemented user interfaces", 
@@ -138,14 +141,14 @@
           "name": "Developed APIs for creating surveys and dashboards in the survey service", 
           "position": "BackEnd", 
           "term": "2022.09 - 2022.11", 
-          "description": "Developed back-office functionalities for Manitto&You, a dining franchise survey service, including the creation of survey templates, survey data-based dashboard, and filtering survey data by 9 categories. Processed data into Google Chart format, enabling visualization through various charts", 
+          "description": "<u>Developed back-office functionalities for Manitto&You, a dining franchise survey service, including the creation of survey templates, survey data-based dashboard, and filtering survey data by 9 categories. Processed data into Google Chart format, enabling visualization through various charts</u>", 
           "tasks": [
             "Developed features: creating survey templates, generating surveys, and building a dashboard based on survey data.", 
             "Participated in the design and construction of the database", 
             "Developed APIs",
             "Participated in Implementing user interfaces", 
             "Created and shared diagrams and documents for effective task collaboration", 
-            "Suggested ideas for 'survey template' and took the lead in developing features for survey template CRUD and conversion to surveys"
+            "<u>Suggested ideas for 'survey template' and took the lead in developing features for survey template CRUD and conversion to surveys</u>"
           ], 
           "techStacks": ["PHP", "MySQL", "Google Chart"]
         }, 
@@ -174,7 +177,7 @@
           "techStacks": ["PHP", "MySQL"]
         }, 
         {
-          "name": "Developed APIs for product tagging and payment in Smart Unmanned Refrigerator", 
+          "name": "<u>Developed APIs for product tagging and payment in Smart Unmanned Refrigerator</u>", 
           "position": "BackEnd", 
           "term": "2021.05 - 2021.10", 
           "description": "Developed an API for tag management and instant payment(customers can take items out of the refrigerator without tagging barcode or paying process)", 
