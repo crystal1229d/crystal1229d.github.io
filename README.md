@@ -43,9 +43,8 @@
 
 - ForeignLanguage 필요하다면 추가 작업 
 - TechStack Badge 화면 width 줄였을 때 글자가 다음줄로 넘어가면 width 가 줄어든 글자에 맞춰지지않는 문제 수정 
-- floating index navbar 에 대한 고민. 
-장점 : 이 이력서에 어떤 항목이 있는지 알 수 있고, 특정 항목에 바로 이동 가능하므로 편리
-- 스크롤에 따른 하이라이트 
+- 하이라이트 -> 스크롤에 따른 하이라이트 
+- Next.js 로 마이그레이션 : SSG 렌더링 
 
 <br />
 
